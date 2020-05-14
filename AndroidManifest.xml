@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="dv106.pp222es.georienteering2"
+    android:versionCode="1"
+    android:versionName="1.0" >
+    
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="19" />
+    
+    <!-- Maps API needs OpenGL ES 2.0. -->
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <!-- The following permissions are required by the Google Maps API, Location Services and Geofencing -->        
+    <uses-permission android:name="android.permission.INTERNET"/>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />	
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>	
+
+    <application
+        
+        android:allowBackup="true"
+        android:icon="@drawable/control_icon_doublesize"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        
+        <!--
+         ** You need to replace the key below with your own key. **
+         The example key below will not be accepted because it is not linked to the
+         certificate which you will use to sign this application.
+         See: https://developers.google.com/maps/documentation/android/start
+         for instructions on how to get your own key.
+         
+         2014-10-29: Updated key for Stargazer
+    	
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyCUHKQI8n8cG3l92N9eN6aN41DOGtFMq5M" />
+        -->
+        
+        <!--
+         2014-11-21: Updated key for Supernova (dv106.pp222es.georienteering2)
+        -->
+        
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyCH1nQnnNplFgShzpKhdblXr3jzHk6V31s" />        
+        
+        
+        <!-- This declaration is necessary to use the Google Maps library -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        
+        <!-- Attribute to put inside activity tag below, if overriding config changes behaviour: -->
+        <!--      android:configChanges="orientation|keyboardHidden"  -->
+        <!-- 20150110: Added android:launchMode="singleTop": -->
+        <!-- See http://stackoverflow.com/questions/3111362/prevent-new-activity-instance-after-clicking-on-notification -->
+        
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleTop"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name=".CreateNewGameActivity"
+            android:label="@string/title_activity_create_new_game"
+            android:parentActivityName="dv106.pp222es.georienteering2.MainActivity" >
+            <!-- Parent activity meta-data to support 4.0 (API 15) and lower -->
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="dv106.pp222es.georienteering2.MainActivity" />                     
+        </activity>
+        
+        <!-- Added Service (with possible intent filters) here, NOTE with exported="false" to disallow others from starting service -->
+        <!--  NOTE: Could use android:process=":myservicename" to run service in a separate process, but note that a
+         LocalBinder can only be used whenever the service runs in the same (local) process as the application. -->
+        <!-- UPDATED 20150113: Full package path -->                
+        <service android:enabled="true" android:exported="false" android:name="dv106.pp222es.georienteering2.LocationTrackerService" > 
+        </service>         
+       
+        <!-- 20141201: Using a Broadcast Receiver instead of IntentService to detect a geofence transition event -->
+        <!-- NOTE: Old package name in intent-filter for the intent action! -->
+        <!-- 20141203: Changed back to android:exported="false" -->
+        <receiver android:exported="false" android:name="dv106.pp222es.georienteering2.GeofenceDetectorReceiver" >
+        <intent-filter >
+            <action android:name="dv106.pp222es.georienteering.ACTION_RECEIVE_GEOFENCE_TRANSITION"/>
+        </intent-filter>
+    	</receiver>        
+        
+        <!-- Preference Activity -->
+        <activity android:name=".MyPreferenceActivity"></activity>
+        
+        <activity android:name=".GameDataActivity"></activity>
+        
+    </application>
+
+</manifest>
