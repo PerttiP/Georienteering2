@@ -1,0 +1,135 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="dv106.pp222es.georienteering.MainActivity" >    
+    
+    <item
+        android:id="@+id/action_create_new_game"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/action_create_new_game"/>
+    
+    <item
+        android:id="@+id/action_save_game"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/action_save_game"/>
+    
+    <item
+        android:id="@+id/action_load_last_saved_game"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/action_load_last_saved_game"/>
+    
+    <item
+        android:id="@+id/action_start_game"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/action_start_game"/>
+    
+    <item
+        android:id="@+id/action_stop_game"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/action_stop_game"/>
+    
+    <item
+        android:id="@+id/action_view_game_data"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/action_view_game_data"/>
+    
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/action_settings"/>
+    
+    <item
+        android:id="@+id/action_license_info"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/action_license_info"/>
+    
+	<item
+        android:id="@+id/action_about_app"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/action_about_app"/>   
+        
+<!-- DEBUG MENU ITEMS -->
+<!--
+	<item
+        android:id="@+id/action_load_game_demo_one"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="Load game demo one"/>	
+        
+	<item
+        android:id="@+id/action_load_game_demo_two"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="Load game demo two"/>
+	
+	<item
+        android:id="@+id/action_test_enable_rotation"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="test enable rotation"/>
+	
+	<item
+        android:id="@+id/action_test_disable_rotation"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="test disable rotation"/>
+	
+	<item
+        android:id="@+id/action_test_check_rotation"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="test check rotation"/>
+
+	<item
+        android:id="@+id/action_test_start_service"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="test start service"/>
+	
+	<item
+        android:id="@+id/action_test_stop_service"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="test stop service"/>	
+        
+	<item
+        android:id="@+id/action_test_bind_service"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="test bind service"/>
+	
+	<item
+        android:id="@+id/action_test_unbind_service"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="test unbind service"/>
+        
+	<item
+        android:id="@+id/action_test_start_tracking"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="test start tracking"/>
+	
+	<item
+        android:id="@+id/action_test_stop_tracking"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="test stop tracking"/>	
+
+    <item
+        android:id="@+id/action_test_check_service"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="test check service and geofences"/>
+-->
+<!-- END DEBUG MENU ITEMS -->    
+    
+</menu>
