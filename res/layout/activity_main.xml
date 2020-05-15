@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/MY_BLACK"
+    tools:context="dv106.pp222es.georienteering.MainActivity" >
+
+    <!-- REMOVED android:textAlignment="center" for TEST on JellyBean Phone -->
+    <TextView
+        android:id="@+id/textdisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/hello_world"
+        
+        android:textColor="@color/MY_GREEN" />
+    
+    <TextView
+        android:id="@+id/positiondisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:textColor="@color/MY_GREEN"
+        android:text="@string/position_display_text" 
+        android:layout_below="@id/textdisplay"/>
+    
+    <RadioGroup
+        android:id="@+id/rg_maptypes"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/positiondisplay" >
+ 
+        <RadioButton
+            android:id="@+id/rb_normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/MY_YELLOW"
+            android:text="@string/maptype_normal"            
+            android:checked="true" />
+ 
+        <RadioButton
+            android:id="@+id/rb_satellite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/MY_YELLOW"
+            android:text="@string/maptype_satellite" />
+ 
+        <RadioButton
+            android:id="@+id/rb_terrain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/MY_YELLOW"
+            android:text="@string/maptype_terrain" />
+ 
+    </RadioGroup>
+    
+    <Button
+        android:id="@+id/done_save_btn"
+        android:layout_width="60dp"
+        android:layout_height="40dp"        
+        android:layout_alignParentRight="true"        
+        android:layout_toRightOf="@id/rg_maptypes"
+        android:text="@string/done_save_btn" />
+    
+    <FrameLayout    
+    	android:id="@+id/container"
+    	android:layout_width="match_parent"
+    	android:layout_height="match_parent"
+    	android:layout_below="@id/rg_maptypes" />
+
+</RelativeLayout>

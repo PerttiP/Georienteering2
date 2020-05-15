@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"    
+    android:background="@color/MY_BLACK"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical" >
+
+    <TextView android:id="@+id/heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/GREEN"
+        android:text="@string/game_data_heading" />
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:orientation="horizontal" >
+
+        <!-- Use same width and height as for respective TextView column in row.xml -->
+        <!-- This is just a dummy heading with no text -->
+
+        <TextView
+            android:id="@+id/heading_dummy"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:text="@string/heading_dummy"
+            android:visibility="invisible" />
+
+        <!-- Use accumulated left padding from row.xml for heading_date: -->
+        <!-- 2 + 6 = 8 -->
+
+        <TextView
+            android:id="@+id/heading_date"
+            android:layout_width="70dp"
+            android:layout_height="20dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="8dp"
+            android:text="@string/heading_date"
+            android:textColor="@color/YELLOW" />
+
+        <!-- Use same left padding as for respective TextView column in row.xml -->
+
+        <TextView
+            android:id="@+id/heading_time"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:gravity="center_vertical|right"
+            android:paddingLeft="6dp"
+            android:text="@string/heading_time"
+            android:textColor="@color/YELLOW" />
+        
+        <!-- Make dist and speed headings slightly narrower than in row.xml -->
+
+        <TextView
+            android:id="@+id/heading_distance"
+            android:layout_width="70dp"
+            android:layout_height="20dp"            
+            android:gravity="center_vertical|right"
+            android:paddingLeft="6dp"
+            android:text="@string/heading_distance"
+            android:textColor="@color/YELLOW" />
+        <!-- Disabled in v 1 -->
+        <!--
+    	<TextView android:id="@+id/heading_speed"
+        	android:layout_width="56dp"
+	    	android:layout_height="20dp"	    	 	
+	    	android:gravity="center_vertical|right"	    	  
+        	android:textColor="@color/YELLOW"
+        	android:text="@string/heading_speed" />
+        -->
+
+        <TextView
+            android:id="@+id/heading_found"
+            android:layout_width="70dp"
+            android:layout_height="20dp"
+            android:gravity="center_vertical|right"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            android:text="@string/heading_found"
+            android:textColor="@color/YELLOW" />
+    </LinearLayout>
+    
+    <ListView android:id="@+id/mylistview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"   
+        android:drawSelectorOnTop="false"/>  
+
+</LinearLayout>
