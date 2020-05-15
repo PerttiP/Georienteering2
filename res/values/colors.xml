@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>  
+     <color name="BLACK">#000000</color>
+     <color name="WHITE">#FFFFFF</color>
+     
+     <color name="RED">#FF0000</color>
+     <color name="GREEN">#00FF00</color>
+     <color name="BLUE">#0000FF</color>     
+     
+     <color name="YELLOW">#FFFF00</color>
+     <color name="ORANGE">#FF0F40</color>
+     <color name="TURCOSE">#00FFFF</color>
+     
+     <color name="DARK_GREY">#808080</color>
+     <color name="LIGHT_GREY">#F0F0F0</color>
+     <color name="GREY">#C0C0C0</color>
+     
+     <color name="LIGHT_GREEN">#AAAFA0</color>
+     <color name="LIGHT_YELLOW">#FFFF80</color>
+     
+     <color name="TRANSP_DARK_RED">#40FA0000</color>
+     <color name="TRANSP_DARK_GREEN">#400FF000</color>
+     
+     
+     <!-- Colors specifically for Georienteering texts -->
+     <color name="MY_RED">#FA0000</color>
+     <color name="MY_GREEN">#00FF00</color>
+     <color name="MY_BLUE">#0060FF</color>
+     <color name="MY_YELLOW">#FFFF00</color>
+     
+     
+     <!-- Colors specifically for Georienteering backgrounds -->
+     <color name="MY_BLACK">#0A0A0A</color>
+     
+     
+</resources>
